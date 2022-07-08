@@ -1,0 +1,14 @@
+body{
+	background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(background.jpg);
+	background-size: cover;
+}
+
+.tableBox{
+	margin-left: 550px;
+	margin-top: 230px;
+	background-color: mistyrose;
+	width: 430px;
+	border-radius: 20px;
+	box-shadow: 20px white;
+	padding: 15px;
+}
