@@ -44,10 +44,8 @@ if (!isset($_SESSION['username'])) {
     <!--- Logout session --->
     <a href="logout.php" style="margin-left: 1220px; color: white; font-size: 25px; text-decoration: none;">Logout</a>
 
-    <a href="help.php" style="margin-left:30px; color: white; font-size: 25px; text-decoration: none;">Help</a>
 
-
-    <a href="about.php" style="margin-left:30px; color: white; font-size: 25px; text-decoration: none;">About Us</a>
+    <a href="index1.php" style="margin-left:30px; color: white; font-size: 25px; text-decoration: none;">About Us</a>
 
          
     

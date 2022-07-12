@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
 	} 
 	else
 	 {
-		echo "<script>alert('Woops! Email or Password is Wrong.')</script>";
+		echo "<script>alert('Email or Password is Wrong.')</script>";
 	}
 }
 

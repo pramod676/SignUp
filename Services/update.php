@@ -21,21 +21,28 @@
 <div style="width : 50%; margin: 0 auto; border: none;">
 	
 	<h1 align="center" style="color: greenyellow;">Change Route</h1>
+
+	<!-- updating the route of current and destination container -->
 	<form action="" method="POST">
 		<fieldset>
+
+			<!-- Updating the current location -->
 			<div style="padding: 10px; text-align: center;">
 				<input type="hidden" name="id" value = "<?php echo $i; ?>">
 				<input type="text" name="current" value="" placeholder="FROM" style="padding : 5px; width: 90%;">
 			</div>
 
+			<!-- Updating the destination location -->
 			<div style="padding: 10px; text-align: center;">
 				<input type="text" name="destination" value="" placeholder="TO" style="padding : 5px; width: 90%;">
 			</div>
 
+			<!-- Updating the price of the location -->
 			<div style="padding: 10px; text-align: center;">
 				<input type="text" name="Price" value="" placeholder="PRICE" style="padding : 5px; width: 90%;">
 			</div>
 
+			<!-- Updating Button -->
 			<div style="padding: 10px; text-align: center;">
 				<input type="submit" name="up" value="Change Now " style="padding : 5px; width: 50%;">
 			</div>

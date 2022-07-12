@@ -10,12 +10,14 @@ if (isset($_SESSION['username'])) {
     header("Location: index.php");
 }
 
+// Storing the credential information
 if (isset($_POST['submit'])) {
 	$username = $_POST['username'];
 	$email = $_POST['email'];
 	$password = md5($_POST['password']);
 	$cpassword = md5($_POST['cpassword']);
 
+	//confirming the password
 	if ($password == $cpassword) {
 		
 		$sql = "SELECT * FROM users WHERE email='$email'";
@@ -38,12 +40,17 @@ if (isset($_POST['submit'])) {
 			else {
 				echo "<script>alert('Woops! Something Wrong Went.')</script>";
 			}
-		} 
+		}
+
+		//Pop-Up message if account already exist 
 		else {
 			echo "<script>alert('This user already exist')</script>";
 		}
 		
-	} else {
+	} 
+
+	//Pop-Up message if password don't match
+	else {
 		echo "<script>alert('Password Not Matched.')</script>";
 	}
 }
@@ -63,24 +70,38 @@ if (isset($_POST['submit'])) {
 	<title>Register Form</title>
 </head>
 <body>
+	<!-- registeration box -->
 	<div class="container">
+		
 		<form action="" method="POST" class="login-email">
             <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
+
+        	<!-- Username -->    
 			<div class="input-group">
 				<input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" required>
 			</div>
+
+			<!--Email  -->
 			<div class="input-group">
 				<input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
 			</div>
+
+			<!-- Password -->
 			<div class="input-group">
 				<input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
             </div>
+
+            <!-- Confirm Password -->
             <div class="input-group">
 				<input type="password" placeholder="Confirm Password" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
 			</div>
+
+			<!-- Submit Button-->
 			<div class="input-group">
 				<button name="submit" class="btn">Register</button>
 			</div>
+
+			<!-- Already have account -->
 			<p class="login-register-text">Have an account? <a href="index.php">Login Here</a>.</p>
 		</form>
 	</div>
